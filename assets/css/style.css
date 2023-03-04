@@ -1,0 +1,740 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 2rem;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #5352ED;
+}
+
+header, article, footer {
+    filter: blur(10px);
+}
+
+.noblur {
+    filter: none;
+}
+
+.navbar {
+    padding-inline: 8rem;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    position: relative;
+    z-index: 99999;
+}
+
+.logo {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo h3 {
+    color: white;
+}
+
+.logo span {
+    color: #0A306A;
+}
+
+.logo img {
+    border-radius: 100%;
+    width: 40px;
+    border: 3px solid #0A306A;
+    box-sizing: border-box;
+}
+
+.nav-hamburger {
+    display: flex;
+    align-items: center;
+}
+
+
+#hamburger {
+    padding: 2px 4px;
+    border-color: transparent;
+    background-color: transparent;
+    cursor: pointer;
+    display: none;
+}
+
+#hamburger > span:nth-child(1){
+    transform-origin: top left;
+    transition: all 0.2s ease-in-out;
+}
+
+#hamburger > span:nth-child(2){
+    transition: all 0.2s ease-in-out;
+}
+
+#hamburger > span:nth-child(3){
+    transform-origin: bottom left;
+    transition: all 0.2s ease-in-out;
+}
+
+.hamburger-line {
+    width: 22px;
+    height: 2px;
+    background-color: #0b2d39;
+    display: block;
+    margin-block: 5px;
+}
+
+.hamburger-active > span:nth-child(1){
+    transform: rotate(45deg);
+}
+
+.hamburger-active > span:nth-child(2){
+    transform: scale(0);
+}
+
+.hamburger-active > span:nth-child(3){
+    transform: rotate(-45deg);
+}
+
+.nav-list ul {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.nav-list li {
+    list-style-type: none;
+}
+
+.nav-list a {
+    text-decoration: none;
+    font-weight: 500;
+    color: white;
+    padding: 10px;
+    border-radius: 99px;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-list a:hover {
+    background-color: #1E90FF;
+}
+
+/* home*/
+.container {
+    padding-inline: 8rem;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.jumbotron {
+    padding-top: 3rem;
+    display: flex;
+    flex: 1;
+}
+
+.jumbotron img {
+    width: 480px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.jumbotron img:hover {
+    transform: scale(1.1);
+}
+
+.description {
+    padding-top: 1rem;
+}
+
+.description h1,h2 {
+    text-align: center;
+}
+
+.description h3 {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.jumbotron .description {
+    color: white;
+}
+
+.description span {
+    color: #0A306A;
+}
+
+/* about */
+#about {
+    margin-top: -1rem;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    background-color: #1E90FF;
+}
+
+.about-content {
+    display: flex;
+    gap: 2rem;
+}
+
+.sesi-1 {
+    flex: 1;
+    text-align: center;
+}
+
+.sesi-2 {
+    flex: 1;
+    text-align: center;
+}
+
+.sesi-3 {
+    flex: 1;
+    text-align: center;
+}
+
+.sesi-3 img {
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.sesi-3 img:hover {
+    transform: scale(1.1);
+}
+
+/* favorite songs */
+#favsongs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:#5352ED;
+}
+
+#favsongs h2 {
+    color: white;
+    font-weight: 700;
+    padding-bottom: 1rem;
+}
+
+.container-card {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.card {
+    background-color: white;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    border-radius: 12px;
+    padding: 2px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card .button {
+    margin: 1rem 0 1rem 0;
+    padding: 10px;
+    background-color:#5352ED;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0px 0px 0px #000;
+}
+
+.card .button a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.card .button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 6px 7px rgba(21, 19, 19, 0.8);
+}
+
+.card .button:active {
+    transform: scale(0.95);
+    background-color:#1E90FF;
+    box-shadow: 2px 2px 5px #333;
+}
+
+/* message */
+#message {
+    margin-top: -1px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    background-color: #1E90FF;
+}
+
+.part-form {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0.5rem;
+}
+
+.part-form label {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.part-form input, textarea {
+    width: 40rem;
+    height: 2.5rem;
+}
+
+.part-form input {
+    border-radius: 6px;
+    border-color: transparent;
+    box-shadow: 0 0 4px rgba(0,0,0,0.3);
+}
+
+.part-form textarea {
+    height: 10rem;
+    border-radius: 6px;
+    box-shadow: 0 0 4px rgba(0,0,0,0.3);
+}
+
+.container-form button{
+    background-color:#5352ED;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 6px;
+    border-color: transparent;
+    box-shadow: 0 0 4px rgba(0,0,0,0.3);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.container-form button:hover {
+    transform: scale(1.1);
+}
+
+.container-form button:active {
+    transform: scale(0.95);
+    background-color:#0A306A;
+    box-shadow: 2px 2px 5px #333;
+}
+
+/* aside */
+main aside {
+    display: flex;
+    justify-content: center;
+    background-color: orange;
+}
+
+.biodata {
+    max-width: 500px;
+    width: 100%;
+    background-color:#5352ED;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    border-radius: 12px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.bio-hidden {
+    display: none;
+}
+
+.biodata p {
+    color: white;
+    line-height: 6px; 
+}
+
+.biodata .description p:nth-child(1){
+    color: #0A306A;
+    font-weight: 700;
+}
+
+.biodata .description p:nth-child(3){
+    padding-top: 0.5rem;
+    color: #0A306A;
+    font-weight: 700;
+}
+
+.biodata .description p:nth-child(5){
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: #0A306A;
+    font-weight: 700;
+}
+
+.biodata img {
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 0 4px rgba(0,0,0,0.5);
+}
+
+main aside .social-media {
+    position: fixed;
+    inset-block: 0;
+    inset-inline-end: 0;
+    height: 100%;
+    display: flex;
+}
+
+main aside .social-media ul {
+    padding: 1.5rem 1rem;
+    margin: auto;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    background-color:#0A306A;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+main aside .social-media li {
+    list-style-type: none;
+}
+
+aside button {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: transparent;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 100%;
+}
+
+aside button:hover {
+    box-shadow: 0px 6px 7px rgba(21, 19, 19, 0.8);
+}
+
+aside button:active {
+    transform: scale(0.95);
+    box-shadow: 2px 2px 5px #333;
+}
+
+main aside .social-media li a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color:white;
+    transition: all .1s ease-in-out;
+}
+
+main aside .social-media li a:hover {
+    color:#5352ED;
+}
+
+.social-media img {
+    width: 30px;
+    border-radius: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 0 4px rgba(0,0,0,0.3);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.social-media img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    margin-top: -2px;
+    background-color: #0A306A;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+footer .socials {
+    padding: 1rem 0;
+}
+
+footer a{
+    margin: 1rem;
+    color: #1E90FF;
+}
+
+footer .socials a:hover{
+    color: #fff;
+}
+
+footer .links {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:space-evenly;
+}
+
+footer .links a{
+    text-decoration: navajowhite;
+}
+
+footer .links a:hover{
+    color : #fff;
+}
+
+footer .credit a{
+    text-decoration: none;
+}
+
+footer .credit a:hover{
+    color: #fff;
+}
+
+/* Media Query */
+@media screen and (max-width: 1200px) {
+    #hamburger {
+        display: block;
+    }
+    .navbar ul {
+        flex-flow: column nowrap;
+        align-items: start;
+        position: absolute;
+        top: 100%;
+        right: 8rem;
+        box-shadow: 0 0 4px rgba(0,0,0,0.5);
+        padding: 2rem;
+        border-radius: 10px;
+        z-index: 9999;
+        background-color:#5352ED;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    h1 {
+        font-size: 42px;
+    }
+
+    .jumbotron h2 {
+        font-size: 26px;
+        margin-bottom: 6rem;
+    }
+    
+    .jumbotron img {
+        width: 470px;
+    }
+
+    .about-content {
+        display: block;
+        gap: 2rem;
+    }
+
+    .sesi-3 img {
+        width: 300px;
+    }
+}
+ 
+@media screen and (max-width: 1000px) {
+    .container {
+        padding-inline: 6rem;
+    }
+
+    .navbar {
+        padding-inline: 6rem;
+    }
+
+    .navbar ul {
+        right: 6rem;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .jumbotron h2 {
+        font-size: 26px;
+        margin-bottom: 6rem;
+    }
+    
+    .jumbotron img {
+        width: 400px;
+    }
+
+    main aside .social-media ul {
+        padding: 1.5rem 1rem;
+        gap: 1.5rem;
+    }
+   
+}
+
+@media screen and (max-width: 860px) {
+    .container {
+        padding-inline: 4rem;
+    }
+
+    .navbar {
+        padding-inline: 4rem;
+    }
+
+    .navbar ul {
+        right: 4rem;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .jumbotron h2 {
+        font-size: 22px;
+        margin-bottom: 6rem;
+    }
+    
+    .jumbotron img {
+        width: 360px;
+    }
+
+    main aside .social-media ul {
+        padding: 1rem 0.8rem;
+        gap: 0.8rem;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 34px;
+    }
+
+    .jumbotron h2 {
+        font-size: 22px;
+        margin-bottom: 6rem;
+    }
+    
+    .jumbotron img {
+        width: 350px;
+    }
+
+    .navbar ul {
+        right: 4rem;
+    }
+
+    .part-form input, textarea {
+        width: 25rem;
+        height: 2.5rem;
+    }
+
+    main aside .social-media ul {
+        padding: 1rem 0.5rem;
+        gap: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    .jumbotron h2 {
+        font-size: 22px;
+        margin-bottom: 6rem;
+    }
+    
+    .jumbotron img {
+        width: 320px;
+    }
+
+    .container {
+        padding-inline: 1rem;
+    }
+
+    .navbar {
+        padding-inline: 1rem;
+    }
+
+    .navbar ul {
+        right: 1rem;
+    }
+
+    .biodata {
+        max-width: 300px;
+    }
+
+    .biodata img {
+        width: 200px;
+    }
+
+    .biodata p {
+        font-size: 10px;
+        padding-inline:1rem;   
+    }
+}
+
+@media screen and (max-width: 660px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    .jumbotron h2 {
+        font-size: 20px;
+        margin-bottom: 6rem;
+    }
+    
+    .jumbotron img {
+        width: 280px;
+    }
+
+    .credit p {
+        font-size: 16px;
+    }
+
+    .navbar {
+        padding-inline: 1rem;
+    }
+
+    .container {
+        padding-inline: 0.5rem;
+    }
+
+    .navbar ul {
+        right: 1rem;
+    }
+
+    .part-form input, textarea {
+        width: 20rem;
+        height: 2.5rem;
+    }
+
+    main aside .social-media ul {
+        padding: 1rem 0.2rem;
+        gap: 0.8rem;
+    }
+
+    .biodata {
+        max-width: 250px;
+    }
+
+    .biodata img {
+        width: 150px;
+    }
+}
